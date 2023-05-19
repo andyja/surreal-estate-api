@@ -28,9 +28,13 @@ mongoose.connect(process.env.DATABASE_CONN, { useNewUrlParser: true });
 restify.serve(router, PropertyListingModel);
 restify.serve(router, FavouriteModel);
 
-app.use(router);
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-app.use('/api/v1', router);
+// app.use(router);
+// app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+// app.use('/api/v1', router);
+
+app.get('/api/v1/test', (req, res) => {
+  res.end(`Item: hello world}`);
+});
 
 expressListRoutes({}, 'Endpoints:', router );
 
