@@ -15,9 +15,11 @@
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "express-list-routes": "^0.1.4",
-    "express-restify-mongoose": "^4.3.0",
+    "express-restify-mongoose": "^7.0.2",
+    "http": "^0.0.1-security",
+    "https": "^1.0.0",
     "method-override": "^2.3.10",
-    "mongoose": "^5.13.17",
+    "mongoose": "^6.11.1",
     "swagger-ui-express": "^3.0.10"
   },
   "engines": {
