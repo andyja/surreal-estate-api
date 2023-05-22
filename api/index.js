@@ -8,10 +8,10 @@ const path = require('path');
 const router = express.Router();
 const expressListRoutes   = require('express-list-routes');
 const cors = require('cors');
-const PropertyListingModel = require('./models/property');
-const FavouriteModel = require('./models/favourite');
+const PropertyListingModel = require('../models/property');
+const FavouriteModel = require('../models/favourite');
 const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('./swagger.json');
+const swaggerDocument = require('../swagger.json');
 
 require('dotenv').config({
   path: path.join(__dirname, './.env'),
