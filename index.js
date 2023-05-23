@@ -8,10 +8,10 @@ const path = require('path');
 const router = express.Router();
 const expressListRoutes   = require('express-list-routes');
 const cors = require('cors');
-const PropertyListingModel = require('../models/property');
-const FavouriteModel = require('../models/favourite');
+const PropertyListingModel = require('./models/property');
+const FavouriteModel = require('./models/favourite');
 const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('../swagger.json');
+const swaggerDocument = require('./swagger.json');
 
 require('dotenv').config({
   path: path.join(__dirname, './.env'),
@@ -32,13 +32,13 @@ app.use(router);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use('/api/v1', router);
 
-app.get('/api/v1/test', (req, res) => {
-  res.end(`Item: hello world}`);
-});
+// app.get('/api/v1/test', (req, res) => {
+//   res.end(`Item: hello world}`);
+// });
 
 expressListRoutes({}, 'Endpoints:', router );
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Surreal Estate API is running on :${PORT}`);
 });
