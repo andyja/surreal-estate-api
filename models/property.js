@@ -13,6 +13,4 @@ const PropertyListingSchema = new mongoose.Schema({
 const PropertyListingModel = mongoose.model('PropertyListing', PropertyListingSchema);
 
 module.exports = PropertyListingModel;
-
-
-// comment
+//comment for redeploy
