@@ -9,3 +9,5 @@ const FavouriteSchema = new mongoose.Schema({
 const FavouriteModel = mongoose.model('Favourite', FavouriteSchema);
 
 module.exports = FavouriteModel;
+
+// master/main change
